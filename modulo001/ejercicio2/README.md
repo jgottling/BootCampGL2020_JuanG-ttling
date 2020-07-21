@@ -1,9 +1,8 @@
-- [ ] 1. 
-	- Crear un proyecto Maven con el comando mvn archetype:generate (En modo no interactivo)
+- [ ] 1. Crear un proyecto Maven con el comando **mvn archetype:generate** (En modo no interactivo)
 	- Agregar las siguientes dependencias para Log4j (Log4j es una biblioteca para el manejo y registros de logs)
 
 - [ ] 2. Crear un proyecto Maven con los siguientes parámetros:
-	- Paquete: com.globallogic.app Proyecto: bootcampgl2020 Version: 1.1
+	- **Paquete**: com.globallogic.app **Proyecto**: bootcampgl2020 Version: 1.1
 	- Agregar la siguiente dependencias:
 		- groupId: org.junit.jupiter artifactId: junit-jupiter-engine version: 5.1.0 scope: test
 		- groupId: org.junit.platform artifactId: junit-platform-surefire-provider version: 1.0.0
