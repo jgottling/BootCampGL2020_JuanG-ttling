@@ -11,4 +11,7 @@
 		- groupId: org.slf4j artifactId: slf4j-simple version: 1.7.30
 	- Descargar dependencias.
 	- Importarlo al STS, y compilarlo
+	<img src="screenshots/maven3.png" >
+	
 - [ ] 3. Modificar el archivo pom.xml creado en el punto 2
+	<img src="screenshots/maven4.png" >
