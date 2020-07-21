@@ -1,5 +1,7 @@
-- [ ] 1. Crear un proyecto Maven con el comando **mvn archetype:generate** (En modo no interactivo)
+- [X] 1. Crear un proyecto Maven con el comando **mvn archetype:generate** (En modo no interactivo)
+	<img src="screenshots/maven1.png" height="500">
 	- Agregar las siguientes dependencias para Log4j (Log4j es una biblioteca para el manejo y registros de logs)
+	<img src="screenshots/maven2.png" >
 
 - [ ] 2. Crear un proyecto Maven con los siguientes parámetros:
 	- **Paquete**: com.globallogic.app **Proyecto**: bootcampgl2020 Version: 1.1
