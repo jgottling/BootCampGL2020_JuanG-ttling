@@ -1,6 +1,6 @@
-##Control de flujos
+## Control de flujos
 
-###If    
+### If    
 1. Ingresar dos valores numéricos, si la suma es superior a 10 mostrar su suma.  
 Pasos:
 - Crear dos variables del tipo numérico con los valores 3 y 10.
@@ -20,7 +20,7 @@ Pasos:
 Ejecutar este ejemplo, tomando como entrada una compra de $400  
   
   
-###For
+### For
 4. Realizar un for de 1 a 10, imprimiendo el valor iterado  
 Pasos:
 - Colocar la cláusula For, valor inicial i=1, valor final <=10, y que incremente en 1  
@@ -36,7 +36,7 @@ Ejemplo salida:
 		Dia de la semana: Lunes  
 		Dia de la semana: Martes  
   
-###While
+### While
 7. Realizar un While de 1 a 10, imprimiendo el valor iterado  
 Pasos :  
 - Colocar la cláusula While valor inicial 1, valor final <=10  
@@ -52,7 +52,7 @@ Ejemplo salida:
 		Valor iterado 2 par  
   
 
-###For each
+### For each
 9. Iterar un Array Integer con un For each  
 Pasos:  
 - Crear una Array del tipo Integer con valores del 1 al 10  
