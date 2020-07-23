@@ -10,6 +10,8 @@ Dado el siguiente diagrama de clases. Crear las clases y subclases que se muestr
 - Crear una instancia de Electrodoméstico y una de Heladera.  
 - Imprimir atributos y métodos de las instancias de Electrodoméstico y Heladera.  
   
+  ![inheritance](screenshots/inheritance.png)  
+  
 ### Polimorfismo
 
 - Crear todas las clases del diagrama anterior.  
@@ -18,6 +20,8 @@ Dado el siguiente diagrama de clases. Crear las clases y subclases que se muestr
 - Hacer una lista de electrodomésticos  
 - Agregar cada instancia a la lista de electrodomésticos  
 - Recorrer la lista y llamar al método encender  
+  
+  ![polymorphism](screenshots/polymorphism.png)  
   
 ### Encapsulamiento
 ```java
@@ -35,6 +39,9 @@ Dado el siguiente diagrama de clases. Crear las clases y subclases que se muestr
 - Instanciar la clase Gato
 - Setear un nombre y patas al objeto Gato
 - Imprimir por pantalla nombre y número de patas
+
+  ![encapsulation](screenshots/encapsulation.png)  
+
   
 ### Abstracción
 ```java
@@ -49,3 +56,5 @@ Dado el siguiente diagrama de clases. Crear las clases y subclases que se muestr
 - Extender la clase Berlina de la clase Automovil
 - Implementar el metodo avanzar
 - Imprimir por pantalla el mensaje correspondiente
+
+  ![abstraction](screenshots/abstraction.png)  
