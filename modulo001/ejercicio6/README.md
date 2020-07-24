@@ -26,6 +26,7 @@
 			Casado: S  
 			Número de Hijos: 2  
 			```  
+  
 	Una vez creada la clase Empleado, la utilizaremos en un programa que lea empleados y los guarde en un array estático.  
 	- El número total de empleados se pide por teclado.  
 	- El número máximo de empleados es de 20.  
