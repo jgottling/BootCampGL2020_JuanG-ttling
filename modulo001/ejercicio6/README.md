@@ -12,7 +12,6 @@
 - La clase Empleado debe implementar la clase Persona y sobreescribir sus métodos  
 - Los objetos Empleado se podrán crear con un constructor por defecto o con un constructor con un solo parámetro correspondiente al DNI.  
 - Además de los métodos getter/setter la clase Empleado tendrá estos métodos:  
-	- Bootcamp 2020 - S&I  
 	- Método para el cálculo del complemento correspondiente a las horas extra realizadas.  
 	- Método para calcular el sueldo bruto (sueldo base + complemento por horas extras)  
 	- Método para calcular las retenciones por IRPF. El porcentaje de IRPF se aplica sobre el sueldo bruto,  
