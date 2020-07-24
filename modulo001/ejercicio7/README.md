@@ -15,6 +15,9 @@ Se espera como salida:
 	El perro hace guau guau    
 	```  
   
+  ![resolución](screenshots/ejint-1.png)
+  
+  
 2. Método default y static  
 Pasos:  
 - A la interface creada en el ejercicio anterior le vamos a agregar 2 nuevos métodos.  
@@ -28,6 +31,9 @@ Se espera como salida:
 	El perro se alimenta  
 	El perro camina  
 	```  
+  
+  ![resolución](screenshots/ejint-2.png)
+  
   
 3. Método default y múltiples interfaces  
 Pasos:  
@@ -46,3 +52,5 @@ Se espera como salida:
 	El hombre no hace sonidos de animal  
 	Se ejecuta método de la clase Hombre  
 	```  
+	
+![resolución](screenshots/ejint-3.png)
