@@ -11,8 +11,8 @@ Pasos:
 - Invocar los métodos creados anteriormente, primero a dormir y luego a sonidoAnimal.  
 Se espera como salida:  
 	```  
-	El perro hace guau guau  
 	Zzz  
+	El perro hace guau guau    
 	```  
   
 2. Método default y static  
