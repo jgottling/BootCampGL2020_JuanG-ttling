@@ -18,14 +18,14 @@
 	- Método para calcular las retenciones por IRPF. El porcentaje de IRPF se aplica sobre el sueldo bruto,  
 	teniendo en cuenta que el porcentaje que hay que aplicar es el tipo menos 2 puntos si el empleado está casado y 	menos 1 punto adicional por cada hijo que tenga.  
 	- Método toString() para mostrar los datos de los empleados de la siguiente forma:  
-			```  
+			
 			12345678A Lucas Guerrero Arjona  
 			Sueldo Base: 1150.0  
 			Horas Extras: 4  
 			tipo IRPF: 15.0  
 			Casado: S  
 			Número de Hijos: 2  
-			```  
+			
 	Una vez creada la clase Empleado, la utilizaremos en un programa que lea empleados y los guarde en un array estático.  
 	- El número total de empleados se pide por teclado.  
 	- El número máximo de empleados es de 20.  
