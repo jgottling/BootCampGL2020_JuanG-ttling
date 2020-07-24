@@ -34,3 +34,6 @@
 	- El empleado que más cobra y el que menos  
 	- El empleado que cobra más por horas extra y el que menos.  
 	- Todos los empleados ordenados por salario de menor a mayor.  
+
+### Resolución
+![screenshot](screenshots/ejercicio6.png)
