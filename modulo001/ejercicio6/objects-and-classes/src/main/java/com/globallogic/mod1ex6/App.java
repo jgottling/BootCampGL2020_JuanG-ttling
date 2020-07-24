@@ -14,10 +14,15 @@ public class App
     	EmpMock.getInstance();
 		
     	//Pedir cantidad de empleados
-    	System.out.println("Ingrese la cantidad total de empleados");
+    	System.out.println("Ingrese la cantidad total de empleados \n");
     	int cantMax = input.nextInt();
     	EmpMock.setMaxEmpleados(cantMax);
-    	    	
+
+    	//Pedir precio hora extra
+    	System.out.println("Ingrese el precio de la hora extra \n");
+    	double precioHoraExtra = input.nextDouble();
+    	Empleado.setPrecioHoraExtra(precioHoraExtra);
+    	
     	//Leer datos de empleados
     	List<Empleado> manyEmpleados = EmpMock.getEmpleados();
     	
