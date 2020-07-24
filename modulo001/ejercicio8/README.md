@@ -11,7 +11,17 @@ Se espera como salida:
 	Esto se ejecuta sin importar si se presentan errores  
 	```  
   
+  ![resolucion](screenshots/ej8-1.png)
+  
 2. A partir de un objeto inicializado en null, ejecute un método de este y capture la excepción mostrando en la salida: "Se produjo una excepción. null"  
+  
+  ![resolucion](screenshots/ej8-2.png)
+  
 3. Escriba código para generar y capturar la excepción ArrayIndexOutOfBoundsException (Índice de matriz fuera de límites) mostrando en la consola "Excepción: índice de array fuera de límites"  
+  
+  ![resolucion](screenshots/ej8-3.png)
+  
 4. Crear su propia clase de excepción (Llamada MiExcepcion) extendiendo la clase Exception. Dicha clase deberá almacenar internamente una referencia de tipo String. Escriba un método que muestre la cadena de caracteres almacenada.  
 Crear otra clase llamada "PropiaClaseExcepcion" donde capture la excepción anterior y utilice el método para mostrar el sting almacenado.  
+  
+  ![resolucion](screenshots/ej8-4.png)
