@@ -9,7 +9,7 @@ public class Exceptions2 {
     	      
     		System.out.println(num.toString());
  		
-    	} catch (Exception e) {
+    	} catch (NullPointerException e) {
     		
     		System.out.println("Se produjo una excepción: null");
     	

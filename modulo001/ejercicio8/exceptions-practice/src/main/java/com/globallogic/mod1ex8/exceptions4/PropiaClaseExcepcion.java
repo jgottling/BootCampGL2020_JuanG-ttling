@@ -8,7 +8,7 @@ public class PropiaClaseExcepcion {
     		int money = 0;
     		
     		if (money - 1 < 0) {
-    			new MiExcepcion().showErrorMessage();
+    			throw new MiExcepcion();
     		}
  		
     	} finally {
