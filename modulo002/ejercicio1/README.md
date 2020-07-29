@@ -1,14 +1,16 @@
+### Introducción a JUnit 5 y assertions
+
 1. Agregar assertions a un proyecto.  
 - Importar el proyecto: junitTestProject.7z  
 - Crear el testCase de la clase: App.java  
 - Crear en el path src/test/java/com/globallogic/bootcampgl/junitTest la clase AppTest conteniendo:  
-  ```  
+  ```java  
   package com.globallogic.bootcampgl.junitTest;  
   class AppTest {  
   }  
   ```  
 - Agregar una assertion para validar que 2 Strings sean iguales:  
-  ```  
+  ```java  
   @Test  
   void test() {  
   assertEquals("Test", "Test");  
@@ -25,6 +27,7 @@
   Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=lcd  
   Results :  
   Tests run: 1, Failures: 0, Errors: 0, Skipped: 0  
+  ```
   
 ---
 2. Crear un Test donde se evalúe, dadas tres variables _String_, dos sean iguales y la tercera sea distinta.  
