@@ -1,6 +1,4 @@
----
 ### Code Coverage
----
   
 1. Para este ejemplo, utilizaremos el proyecto provisto en el archivo: coverage.example.zip.  
 - Agregar la dependencia Maven del plugin Jacoco para tests de cobertura. En el pom agregar:
