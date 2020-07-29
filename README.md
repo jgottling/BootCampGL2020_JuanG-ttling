@@ -15,6 +15,6 @@ Este repositorio tiene los ejercicios individuales del Bootcamp. Cada carpeta ll
 
 ---
 ### 002 - Introducción a pruebas
-1. [Introducción a Junit 5 y assertion](modulo002/ejercicio1)
+1. [Introducción a Junit 5 y assertions](modulo002/ejercicio1)
 2. [Code coverage](modulo002/ejercicio2)
 3. [Mockito](modulo002/ejercicio3)
