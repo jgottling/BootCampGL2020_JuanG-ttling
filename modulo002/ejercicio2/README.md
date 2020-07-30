@@ -38,5 +38,9 @@
   ![cobertura](screenshots/coverage-100.png)  
   
 ---
-2. Al ejercicio del archivo coverage.loteria.zip, agregar los test necesarios para cubrir el 80% del código con las pruebas. ¿Cómo podria asegurar una cobertura del 100% del código?  
+2. Al ejercicio del archivo coverage.loteria.zip, agregar los test necesarios para cubrir el 80% del código con las pruebas. ¿Cómo podría asegurar una cobertura del 100% del código?  
+
+![cobertura](screenshots/loteria-coverage-80.png)  
+
+Para obtener el 100% de cobertura habría que testear todas las instrucciones del programa
 
