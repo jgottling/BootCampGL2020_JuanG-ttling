@@ -3,10 +3,10 @@ package coverage.loteria;
 import coverage.loteria.model.CartonGenerator;
 
 public class Loteria {
-	private float pozo;
-	private int boletos;
-	private int ganadores;
-	private CartonGenerator cartonGenerator;
+	float pozo;
+	int boletos;
+	int ganadores;
+	CartonGenerator cartonGenerator;
 	
 	
 	public Loteria(float pozo, int boletos, CartonGenerator cartonGenerator) {

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class CartonGenerator{
 	
-	private Random rand;
+	public Random rand;
 	
 	public CartonGenerator()
 	{

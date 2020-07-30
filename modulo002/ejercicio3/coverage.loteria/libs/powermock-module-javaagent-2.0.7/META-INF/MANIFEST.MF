@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: powermock-module-javaagent
-Premain-Class: org.powermock.modules.agent.PowerMockAgent
-Implementation-Version: 2.0.7
-Agent-Class: org.powermock.modules.agent.PowerMockAgent
-Can-Redefine-Classes: true
-Can-Retransform-Classes: true
-Created-By: 1.8.0_151 (Oracle Corporation)
-

@@ -8,14 +8,17 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-
 import coverage.loteria.model.CartonGenerator;
+import java.util.Random;
 
 @ExtendWith(MockitoExtension.class)
 public class CartonTest {
 
 	@Mock
 	CartonGenerator carton;
+	
+	@Mock
+	Random myRandom;
 	
 	@Test
 	@DisplayName("Carton generates a winner")
@@ -25,5 +28,15 @@ public class CartonTest {
 		assertTrue(carton.isGanador());
 		
 	}
+	
+	@Test
+	@DisplayName("Random number is generated")
+	void test1() {
+		CartonGenerator unCarton = new CartonGenerator();
+		unCarton.rand = myRandom;
+		Mockito.when(myRandom.nextInt()).thenReturn(1);
+		assertTrue(unCarton.isGanador());
+	}
+
 	
 }
