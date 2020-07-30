@@ -29,8 +29,14 @@
   </plugin>
   ```  
 - Verificar la cobertura de test actual: ejecutando el target de maven verify y verificar el resultado en *target/site/jacoco/index.html*  
+  
+  ![cobertura-actual](screenshots/current-coverage.png)  
+  ![cobertura-actual](screenshots/current-coverage-jacoco-html.png)  
+  
 - Crear tests para cubrir el 100% de la cobertura, mostrando el resultado tras ejecutar nuevamente el verify.  
-
+  
+  ![cobertura](screenshots/coverage-100.png)  
+  
 ---
 2. Al ejercicio del archivo coverage.loteria.zip, agregar los test necesarios para cubrir el 80% del código con las pruebas. ¿Cómo podria asegurar una cobertura del 100% del código?  
 
