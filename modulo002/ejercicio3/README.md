@@ -13,7 +13,8 @@ instanciados, para ellos
 - Implementar un mock de la interfaz y probar la librería:
   - Agregar un atributo a la clase:
   ```java  
-  @Mock Vehicle vehicleMock;  
+  @Mock  
+  Vehicle vehicleMock;  
   ```  
 
   - Modificar el test Crash para que utilice el mock y volver a realizar la prueba.  
@@ -26,6 +27,7 @@ instanciados, para ellos
   crashTest.crash(vehicleMock);  
   ...  
   ```
+  
   ![resolucion](screenshots/ej3-1.png)  
 
 ---
