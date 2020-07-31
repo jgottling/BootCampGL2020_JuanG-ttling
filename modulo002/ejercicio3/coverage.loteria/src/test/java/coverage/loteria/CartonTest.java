@@ -1,5 +1,6 @@
 package coverage.loteria;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.DisplayName;
@@ -36,6 +37,15 @@ public class CartonTest {
 		unCarton.rand = myRandom;
 		Mockito.when(myRandom.nextInt()).thenReturn(1);
 		assertTrue(unCarton.isGanador());
+	}
+	
+	@Test
+	@DisplayName("Random number is generated")
+	void test2() {
+		CartonGenerator unCarton = new CartonGenerator();
+		unCarton.rand = myRandom;
+		Mockito.when(myRandom.nextInt()).thenReturn(2);
+		assertFalse(unCarton.isGanador());
 	}
 
 	
