@@ -3,6 +3,7 @@
  */
 package mockito.example.services.impl;
 
+import mockito.example.customExceptions.CustomException;
 import mockito.example.services.BasicOperationsService;
 import mockito.example.services.CalculatorService;
 import mockito.example.services.DataService;
@@ -10,6 +11,15 @@ import mockito.example.services.DataService;
 public class CalculatorServiceImpl implements CalculatorService {
 	private DataService dataService;
 	private BasicOperationsService basicOperationsService;
+
+	
+	public BasicOperationsService getBasicOperationsService() {
+		return basicOperationsService;
+	}
+
+	public void setBasicOperationsService(BasicOperationsService basicOperationsService) {
+		this.basicOperationsService = basicOperationsService;
+	}
 
 	public void setDataService(DataService dataService) {
 		this.dataService = dataService;
@@ -26,12 +36,15 @@ public class CalculatorServiceImpl implements CalculatorService {
 
 	@Override
 	public double calculateSubstraction(int a, int b) {
-		return basicOperationsService.subtract(a, b);
+		return basicOperationsService.substract(a, b);
 	}
 	
 	@Override
-	public double calculateDivision(int a, int b) {
-		return basicOperationsService.divide(a, b);		
+	public double calculateDivision(int a, int b) throws CustomException {
+		
+		if (b == 0) {
+			throw new CustomException("error! no se puede dividir por 0");
+		} else return basicOperationsService.divide(a, b);		
 	}
 
 	@Override
@@ -51,8 +64,7 @@ public class CalculatorServiceImpl implements CalculatorService {
 
 	@Override
 	public boolean isOdd(int a) {
-		// TODO implement me
-		return false;
+		return (a % 2) == 0;
 	}
 
 	@Override
