@@ -1,13 +1,21 @@
 ### Mockito  
   
 1. Para este ejemplo, utilizaremos el proyecto provisto en el archivo mockito.example.zip. Para poder implementar un test completo de la librería, se tendrá que crear un mock para probar los objetos
-instanciados, para ellos:  
+instanciados, para ellos  
 - Agregar al pom las dependencias de mockito:  
   - **groupId**: org.mockito, **artifactId**: mockito-core, **version**: 3.4.0, **scope**: test  
   - **groupId**: org.mockito, **artifactId**: mockito-junit-jupiter, **version**: 3.4.0, **scope**: test  
-- Modificar el test para que utilice mockito, agregando la annotation: _@ExtendWith(MockitoExtension.class)_
+- Modificar el test para que utilice mockito, agregando la annotation:
+  ```java  
+	@ExtendWith(MockitoExtension.class)  
+  ```  
+  
 - Implementar un mock de la interfaz y probar la librería:
-  - Agregar un atributo a la clase: _@Mock Vehicle vehicleMock;_  
+  - Agregar un atributo a la clase:
+  ```java  
+  @Mock Vehicle vehicleMock;  
+  ```  
+
   - Modificar el test Crash para que utilice el mock y volver a realizar la prueba.  
   ```java  
   @Test  
@@ -18,8 +26,12 @@ instanciados, para ellos:
   crashTest.crash(vehicleMock);  
   ...  
   ```
-  
+  ![resolucion](screenshots/ej3-1.png)  
+
 ---
 2. En base al ejercicio 2, tomando el proyecto de la lotería, sin modificaciones sobre las clases del paquete **coverage.loteria**, construir un test que genere los mocks necesarios para cubrir un 100% las
 pruebas de cobertura.  
+  
+  ![resolucion](screenshots/ej3-2.png)
+  
   
