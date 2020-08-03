@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import com.globallogic.bootcamp.patterns.singleton.Currency;
 import com.globallogic.bootcamp.patterns.singleton.Order;
+import com.globallogic.bootcamp.patterns.singleton.Product;
 
 public class SingletonTest {
 	@Test
@@ -24,5 +25,13 @@ public class SingletonTest {
 		Order order1 = new Order("order1", 33.33, Currency.getInstance());
 		Order order2 = new Order("order2", 77.77, Currency.getInstance());
 		assertTrue(order1.getCurrency().equals(order2.getCurrency()));
+	}
+	
+	@Test
+	@DisplayName("Different orders use the same product")
+	void test3() {
+		Order order1 = new Order("order1", 33.33, Currency.getInstance(), Product.getInstance());
+		Order order2 = new Order("order2", 77.77, Currency.getInstance(), Product.getInstance());
+		assertTrue(order1.getProduct().equals(order2.getProduct()));
 	}
 }
