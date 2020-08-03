@@ -31,6 +31,7 @@ Para toda esta práctica crear un proyecto maven llamado `patterns` con el basep
 ---
 4. Crear una clase `Product`, con el atributo `name` (con valor "Clavos") siendo esta un singleton, e incluir en la clase `Order` un atributo de esta clase. Agregar los tests necesarios para demostrar que se realizó correctamente el ejercicio.
   
+  ![solution](screenshots/delegation.png)  
   
 ---
 ### Inyección de dependencia
