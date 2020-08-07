@@ -10,7 +10,7 @@ Agregar la entidad (clase)Alumno, con sus getters, setter, toString y sus constr
 	- `Nombre`  
 	- `Apellido`  
 
-Agregar en la entidad `Alumno` las siguientes anotaciones:
+Agregar en la entidad `Alumno` las siguientes anotaciones:  
 	- `Entity`: a nivel de clase  
 	- `Table`: con el parámetro `name` con el valor `alumno` a nivel de clase  
 	- `Id`: para el atributo `id`  
@@ -20,7 +20,7 @@ Agregar en la entidad `Alumno` las siguientes anotaciones:
   
 Agregar una Clase `AlumnoDao` con los siguientes métodos:  
 
-	```java  
+```java
 	public void createAlumno(Alumno alumno) {  
 		Transaction transaction = null;  
 		try (Session session = HibernateConfig.getSessionFactory().openSession()) {  
@@ -47,10 +47,10 @@ Agregar una Clase `AlumnoDao` con los siguientes métodos:
 		, Alumno.class).setParameter("nombre", nombre).setParameter("apellido", apellido).list();  
 		}  
 	}  
-	```
+```
   
 Agregar a la Clase `AlumnoDao` con los siguientes métodos  
-	```java  
+```java  
 	public void updateAlumno(Alumno alumno) {  
 		Transaction transaction = null;  
 		try (Session session = HibernateConfig.getSessionFactory().openSession()) {  
@@ -76,10 +76,10 @@ Agregar a la Clase `AlumnoDao` con los siguientes métodos
 			e.printStackTrace();    
 		}  
 	}  
-	```  
+```  
   
 Agregar una Clase `HibernateConfig` con el siguiente método:  
-	```java
+```java
 	private static SessionFactory sessionFactory = null;  
 	public static SessionFactory getSessionFactory() {  
 		if (sessionFactory == null) {  
@@ -103,7 +103,7 @@ Agregar una Clase `HibernateConfig` con el siguiente método:
 		}  
 		return sessionFactory;  
 	}  
-	```
+```
   
 Agregar una clase `ExampleApplication` donde muestre la utilización del DAO, realizando las siguientes operaciones:  
 	- Agregar los alumnos  
@@ -123,14 +123,14 @@ menu:
 	- `descripcion`: una delicada milanesa con crocantes papas fritas finamente seleccionadas  
 	- `precio`: 500.00  
   
-- plato:  
+- `plato`:  
 	- `nombre`: Lomo al piedra  
 	- `descripcion`: un curioso plato donde se utilizan piedras calentadas al rojo vivo para cocinar el lomo junto a especias orientales y sudamericanas logrando un elixir entre la textura y el sabor.  
 	- `precio`: 750.00  
   
 ---
 3. Crear un CRUD utilizando H2 para la entidad `Carrera`, donde se muestra con el siguiente ejemplo. Crear las pruebas de JUnit necesarias para mostrar su funcionamiento completo:  
-	```json
+```json
 	{
 		"carrera": {
 			"fecha": "2020-07-17",
@@ -143,4 +143,4 @@ menu:
 				]
 		}
 	}
-	```
+```
