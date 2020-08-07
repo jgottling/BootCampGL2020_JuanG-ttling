@@ -115,6 +115,8 @@ Modificar el alumno `Esteban Quito` por su nombre real: `Estefano`
   
 Buscar y eliminar el alumno `Jose Perez` porque ya se encontraba en una práctica anterior.  
     
+  ![resolución](screenshots/ej2-1.png)
+  
 ---
 2. Crear un CRUD utilizando `H2` para la entidad Menu, donde se muestra con el siguiente ejemplo. Crear las pruebas de JUnit necesarias para mostrar su funcionamiento completo:  
 menu:  
