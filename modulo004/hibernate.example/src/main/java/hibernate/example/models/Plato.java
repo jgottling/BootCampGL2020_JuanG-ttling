@@ -43,6 +43,14 @@ public class Plato {
 		
 		menus = new ArrayList<Menu>();
 	}
+	
+	public Plato(Long id, String nombre, String descripcion, double precio, List<Menu> menus) {
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.precio = precio;
+		this.id = id;
+		this.menus = menus;
+	}
 
 	public Long getId() {
 		return id;

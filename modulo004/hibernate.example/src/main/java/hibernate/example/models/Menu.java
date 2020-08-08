@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,17 +23,17 @@ public class Menu {
 	@Column(name="menu_id")
 	private Long id;
 	
-	@Column(name="nombre")
+	@Column(name="nombre", insertable=true, updatable=true, unique=false)
 	private String nombre;
 	
-	@Column(name="descripcion")
+	@Column(name="descripcion", insertable=true, updatable=true, unique=false)
 	private String descripcion;
 	
 	
     @ManyToMany(cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
-        })
+        }, fetch=FetchType.EAGER)
         @JoinTable(
         	name = "menu_plato",
             joinColumns = {@JoinColumn(name = "menu_id")},
@@ -43,10 +44,17 @@ public class Menu {
     public Menu() {
     	platos = new ArrayList<Plato>();
     }
-	
+
 	
 	public Menu(String nombre, String descripcion) {
 		platos = new ArrayList<Plato>();
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+	}
+	
+	public Menu(Long id, List<Plato> platos, String nombre, String descripcion) {
+		this.id = id;
+		this.platos = platos;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 	}
@@ -88,4 +96,7 @@ public class Menu {
 		return this.id;
 	}
 	
+	public void setId(Long id) {
+		this.id = id;
+	}
 }

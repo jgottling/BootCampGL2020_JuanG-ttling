@@ -14,13 +14,14 @@ public class PlatoDaoImpl {
 		try (Session session = HibernateConfig.getSessionFactory().openSession()) {  
 			transaction = session.beginTransaction();  
 			session.save(plato);  
-			transaction.commit();  
+			transaction.commit();
 		} catch (Exception e) {  
 			if (transaction != null) {  
 				transaction.rollback();  
 			}  
 			e.printStackTrace();  
-		}  
+		}
+		
 	}  
   
 	public List <Plato> getPlatos() {  

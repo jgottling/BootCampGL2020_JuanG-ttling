@@ -1,8 +1,6 @@
 package hibernate.example;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -24,56 +22,69 @@ public class MenuTests {
 	static void setup() {
 		plato1 = new Plato("Milanesa Clasica", "una delicada milanesa con crocantes papas fritas finamente seleccionadas", 500.00);
 		plato2 = new Plato("Lomo a la piedra", " un curioso plato donde se utilizan piedras calentadas al rojo vivo para cocinar el lomo junto a especias orientales y sudamericanas logrando un elixir entre la textura y el sabor",750.00);
-		
-		menu = new Menu("Menu del dia", "lo mejor");
-		menu.addPlato(plato1);
-		menu.addPlato(plato2);
-		
+	
 		daoMenu = new MenuDaoImpl();
 		daoPlato = new PlatoDaoImpl();
+		
+		menu = new Menu("Menu del dia", "lo mejor");
 		
 		daoPlato.createPlato(plato1);
 		daoPlato.createPlato(plato2);
 		daoMenu.createMenu(menu);
+		
+		menu.addPlato(plato1);
+		menu.addPlato(plato2);
+		
+		daoMenu.updateMenu(menu);
+		daoPlato.updatePlato(plato1);
+		daoPlato.updatePlato(plato2);
 
+	}
+
+	@Test
+	@DisplayName("Trae un menu")
+	void test() {
+	
+		assertEquals(1, daoMenu.getMenuById((long) 1).getId());
+	}
+	
+	@Test
+	@DisplayName("Trae un menu y sus platos")
+	void test2() {
+	
+		assertEquals(1250, daoMenu.getMenuById((long) 1).getPrecio());
 	}
 	
 	@Test
 	@DisplayName("Crear menu con platos")
-	void test1() {
+	void test3() {
 	
 		assertEquals(1, daoMenu.getMenus().size());
 	}
 	
 	@Test
 	@DisplayName("Crear y recuperar más de un menu")
-	void test2() {
+	void test4() {
 		Menu menu2 = new Menu("Menu de noche", "para dormir mejor"); 
 		
 		daoMenu.createMenu(menu2);
-	
+		
+		System.out.println("Id de menu2 es: " + menu2.getId() );
 		assertEquals(2, daoMenu.getMenus().size());
 	}
 	
 	@Test
 	@DisplayName("Borrar menu")
-	void test3() {
+	void test5() {
 		daoMenu.removeMenu(menu);
 	
 		assertEquals(1, daoMenu.getMenus().size());
 	}
 	
-	
-	@Test
-	@DisplayName("Buscar menu por nombre")
-	void test4() {
-	
-		assertNotNull(daoMenu.getMenuByName("Menu de noche"));
-	}
-	
+
 	@Test
 	@DisplayName("Actualizar menu")
-	void test5() {
+	void test6() {
 		
 		Menu menu3 = new Menu("Especial", "lo mas caro");
 		
@@ -83,6 +94,6 @@ public class MenuTests {
 		
 		daoMenu.updateMenu(menu3);
 		
-		assertNotNull(daoMenu.getMenuByName("SuperEspecial"));
+		assertEquals("SuperEspecial", daoMenu.getMenuById(3l).getNombre());
 	}
 }
