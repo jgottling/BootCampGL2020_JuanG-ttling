@@ -109,7 +109,7 @@ Agregar una clase `ExampleApplication` donde muestre la utilización del DAO, re
 	- Agregar los alumnos  
 		- `Jose Perez`  
 		- `Esteban Quito`  
-	- Ulrica Godofreda  
+		- `Ulrica Godofreda`  
   
 Modificar el alumno `Esteban Quito` por su nombre real: `Estefano`  
   
@@ -130,7 +130,7 @@ menu:
 	- `descripcion`: un curioso plato donde se utilizan piedras calentadas al rojo vivo para cocinar el lomo junto a especias orientales y sudamericanas logrando un elixir entre la textura y el sabor.  
 	- `precio`: 750.00  
   
-  ![resolución](screenshots/ej2-1.png)
+  ![resolución](screenshots/ej2-2.png)
   
 ---
 3. Crear un CRUD utilizando H2 para la entidad `Carrera`, donde se muestra con el siguiente ejemplo. Crear las pruebas de JUnit necesarias para mostrar su funcionamiento completo:  
