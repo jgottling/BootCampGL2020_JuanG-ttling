@@ -147,4 +147,7 @@ menu:
 				]
 		}
 	}
-```
+```  
+  
+  ![resolución](screenshots/ej2-3.png)  
+  

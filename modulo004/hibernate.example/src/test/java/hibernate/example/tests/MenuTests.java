@@ -1,4 +1,4 @@
-package hibernate.example;
+package hibernate.example.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeAll;
@@ -11,7 +11,7 @@ import hibernate.example.models.Menu;
 import hibernate.example.models.Plato;
 
 public class MenuTests {
-
+/*
 	static Plato plato1;
 	static Plato plato2;
 	static Menu menu;
@@ -96,4 +96,5 @@ public class MenuTests {
 		
 		assertEquals("SuperEspecial", daoMenu.getMenuById(3l).getNombre());
 	}
+ */
 }
