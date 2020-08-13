@@ -1,4 +1,4 @@
-package com.globallogic.bootcampgl.customer.utils;
+package com.globallogic.bootcampgl.order.utils;
 
 import com.globallogic.bootcampgl.order.models.Order;
 

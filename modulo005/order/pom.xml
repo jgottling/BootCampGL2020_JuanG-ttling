@@ -8,9 +8,9 @@
 		<version>2.1.16.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.globallogic.bootcampgl</groupId>
+	<groupId>com.globallogic.bootcampms</groupId>
 	<artifactId>order</artifactId>
-	<version>1.0.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>order</name>
 	<description>Order</description>
 

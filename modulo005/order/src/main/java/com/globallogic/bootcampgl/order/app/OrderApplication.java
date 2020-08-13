@@ -6,8 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.globallogic.bootcampgl.customer.utils.OrderFactory;
 import com.globallogic.bootcampgl.order.models.Order;
+import com.globallogic.bootcampgl.order.utils.OrderFactory;
 
 @SpringBootApplication
 public class OrderApplication implements CommandLineRunner {
