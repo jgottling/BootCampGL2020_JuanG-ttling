@@ -46,11 +46,15 @@ Pasos:
 - `dni`: 234567890
 - `id`: 12342
   
+  ![resolución](../screenshots/ej2-2.png)  
+  
 ---
 3. Crear un proyecto en Spring Boot para `Order` con el grupo `com.globallogic.bootcampgl` utilizando el STS, donde se muestra la utilización del `@Autowired` implementando una clase `OrderFactory` que a través del método `getNewOrder()` genera una nueva instancia de la clase `Order` para mostrarla en pantalla. Esta clase está compuesta por:  
 - `product`: C-00221
 - `count`: 1000
 - `customer`: 12342
+  
+  ![resolución](../screenshots/ej2-3.png)  
   
 ---
 4. Crear un proyecto en Spring Boot para `Product` con el grupo `com.globallogic.bootcampgl` utilizando el STS, donde implemente un bean de `ProductRepository`, para implementar el método `getById(id)` para obtener el producto definido por su `id` y compuesta por:  
