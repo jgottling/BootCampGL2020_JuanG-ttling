@@ -1,6 +1,6 @@
 ### Introducción a Postman y prueba de servicios  
   
-1. Realizar una peticion `GET` hacia `https://postman-echo.com/get`  
+1. Realizar una petición `GET` hacia `https://postman-echo.com/get`  
 	- Crear la Collection `"EjerciciosPostman"`  
 	- Agregar el Folder `"Get"`  
 	- Agregar un nuevo Request con el nombre `"GetPostman"`.  
