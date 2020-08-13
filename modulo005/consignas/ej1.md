@@ -9,19 +9,19 @@
 	- Verificar Respuesta y guardar response (as example)  
   
 ---
-2. Crear la petición (Crear folder Post) POST hacia `https://postman-echo.com/post`. Ejecutar, verificar que la respuesta y guardar response (as example)  
+2. Crear la petición (Crear folder Post) POST hacia `https://postman-echo.com/post`. Ejecutar, verificar la respuesta y guardar response (as example)  
   
 ---
-3. Crear y ejecutar la petición (Crear folder Delete) DELETE hacia `https://postman-echo.com/delete`. Verificar Respuesta y guardar response (as example)  
+3. Crear y ejecutar la petición (Crear folder Delete) DELETE hacia `https://postman-echo.com/delete`. Verificar la respuesta y guardar response (as example)  
   
 ---
-4. Crear y ejecutar la petición (En Folder Get) Get hacia `https://postman-echo.com/time/valid`, con el siguiente query Params `timestamp = 2020-07-12`. Verificar Respuesta y guardar response (as example)  
+4. Crear y ejecutar la petición (En Folder Get) Get hacia `https://postman-echo.com/time/valid`, con el siguiente query Params `timestamp = 2020-07-12`. Verificar la respuesta y guardar response (as example)  
   
 ---
-5. Crear y ejecutar la petición (En Folder Get) Get hacia `https://postman-echo.com/time/valid`, con los siguientes query Params `timestamp = 2020-07-12` y `format=mm`. Verificar Respuesta y guardar response (as example)  
+5. Crear y ejecutar la petición (En Folder Get) Get hacia `https://postman-echo.com/time/valid`, con los siguientes query Params `timestamp = 2020-07-12` y `format=mm`. Verificar la respuesta y guardar response (as example)  
   
 ---
-6. Crear y ejecutar la petición (En Folder Post) Post hacia `https://postman-echo.com/post`, con los siguientes header y body. Verificar Respuesta y guardar response (as example)  
+6. Crear y ejecutar la petición (En Folder Post) Post hacia `https://postman-echo.com/post`, con los siguientes header y body. Verificar la respuesta y guardar response (as example)  
 	- Header:  
 			`Content-Type= application/json`  
 	- Body:  
@@ -44,5 +44,5 @@
   
 Configurar los siguientes test:  
 - Verificar `http code response = 200`. Retornando el mensaje: `"Postman Ejerc 8 Test Válido"  
-- Si `http-code = 200`, verificar que authenticated (Presente en la estructura JSON Response) no sea `true`. Retornando el mensaje: `"Postman Ejerc 8 Test - authenticated"` Verificar Respuesta y guardar response (as example)
+- Si `http-code = 200`, verificar que authenticated (Presente en la estructura JSON Response) no sea `true`. Retornando el mensaje: `"Postman Ejerc 8 Test - authenticated"` Verificar la respuesta y guardar response (as example)
 
