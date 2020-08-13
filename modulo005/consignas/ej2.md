@@ -3,7 +3,7 @@
 1- Crear un proyecto en Spring Boot manualmente:  
 Pasos:  
 	- Crear un proyecto Maven con la siguiente configuración:  
-		-**Paquete**: `com.globallogic.bootcampgl.spring`  
+		- **Paquete**: `com.globallogic.bootcampgl.spring`  
 		- **Nombre de proyecto**: `manual` **Version**: `1.0.0`  
 		- **Padre**:  
 			- **groupId**: `org.springframework.boot`  
@@ -25,7 +25,9 @@ Crear clase `ManualApplication` en el paquete `com.globallogic.bootcampgl.spring
   
 - Ejecutar la aplicación.  
   
-- Crear un proyecto en Spring Boot con el initializer  
+    ![resolución](../screenshots/ej2-1A.png)  
+  
+- Crear un proyecto en Spring Boot con el [initializer](https://start.spring.io/)  
 Pasos:  
 - Ir a la página: `Spring Initializr`  
 - Cargar los campos:  
@@ -35,6 +37,8 @@ Pasos:
 - Seleccionar la opción `Generate` y descargar el proyecto  
 - Importar el proyecto en el STS: ir a `File` >>> `Import` >>> `Projects from Folder or Archive` >>> `Archive`, seleccionar el archivo descargado y elegir solo la opción de un proyecto maven y clickear `Finish`.  
 - Compilar y ejecutar  
+  
+  ![resolución](../screenshots/ej2-1B.png)  
   
 ---
 2. Crear un proyecto en Spring Boot para `Customer` con el grupo `com.globallogic.bootcampgl` utilizando el STS, que implemente la interface `CommandLineRunner` y cuando inicie la aplicación muestre por consola al cliente definido por la clase `Customer`:  
