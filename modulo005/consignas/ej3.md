@@ -36,57 +36,31 @@ _*Para tener en cuenta en la clase `ProductServiceImpl` vamos a tener un `HashMa
 ```
   
 ---
-Ejercicio 3.2: Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el
-método POST.
--
-Vamos a la clase ProductService,y agregamos un método createProducto que no retorne valor, en
-el cual tengamos como parámetro un producto de tipo ProductDTO.
--
-En la clase ProductServiceImpl, implementamos el método creado en ProductService en el cual
-realizamos un put a productRepo con product.getId() y product.
--
-En la clase ProductServiceController, vamos a crear un método de nombre createProduct que
-retorne ResponseEntity<Object> y que tenga como parámetros un @RequestBody ProductDTO
--
-En este método al igual que en el get vamos a agregar el annotation @RequestMapping que tenga
-value con “/products” y method con RequestMethod.POST. Invocar al método createProduct de
-ProductService y retornamos
-new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
--
-Compilar y ejecutar
--
-Ir a postman, agregamos un nuevo tab, seleccionamos POST y ponemos la siguiente URL
-http://localhost:8080/products y como request { "id":"3", "name":"Ginger"}
--
-Vuelva a ejecutar el GET del ejercicio anterior.
-Bootcamp 2020 - S&I3 - Introducción a Rest con Spring Boot
-Ejercicio 3.3: Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el
-método PUT.
--
-Vamos a la clase ProductService, vamos a agregar un método abstracto updateProducto que no
-retorne valor, en el cual tengamos como parámetros un String id y product de tipo ProductDTO.
--
-En la clase ProductServiceImpl, implementamos el método creado en ProductService en el cual
-hacemos una eliminación(delete) del id en productRepo, a product le agregamos el id y realizamos una
-actualización (put) a productRepo con product.getId() y product.
--
-En la clase ProductServiceController, vamos a crear un método de nombre updateProduct que
-retorne ResponseEntity<Object> y que tenga como parámetros un @PathVariable("id") String
-id y @RequestBody ProductDTO.
--
-En este método al igual que en el créate vamos a agregar el annotation @RequestMapping que tenga
-value con "/products/{id}" y method con RequestMethod.PUT.
--
-Invocar al método updateProduct de ProductService y retornamos:
-new ResponseEntity<>("Product is updated successfully", HttpStatus.OK);
--
-Compilar y ejecutar
--
-Ir a postman, agregamos un nuevo tab, seleccionamos PUT y ponemos la siguiente URL
-http://localhost:8080/products/3 y como request {"name" : "Indian Ginger"}
--
-Vuelva a ejecutar el GET del ejercicio 3.1.
-Bootcamp 2020 - S&I3 - Introducción a Rest con Spring Boot
+2. Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el método **POST**.  
+- Vamos a la clase `ProductService`, y agregamos un método `createProduct` que no retorne valor, en el cual tengamos como parámetro un producto de tipo `ProductDTO`.
+- En la clase `ProductServiceImpl`, implementamos el método creado en `ProductService` en el cual realizamos un **put** a `productRepo` con `product.getId()` y `product`.
+- En la clase `ProductServiceController`, vamos a crear un método de nombre `createProduct` que retorne `ResponseEntity<Object>` y que tenga como parámetros un `@RequestBody ProductDTO`
+- En este método, al igual que en el **get**, vamos a agregar la annotation `@RequestMapping` que tenga value con `“/products”` y `method` con `RequestMethod.POST`. Invocar al método `createProduct` de `ProductService` y retornamos  
+```
+  new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
+```
+- Compilar y ejecutar
+- Ir a postman, agregamos un nuevo tab, seleccionamos POST y ponemos la siguiente URL `http://localhost:8080/products` y como request `{ "id":"3", "name":"Ginger"}`
+- Vuelva a ejecutar el GET del ejercicio anterior.  
+  
+---
+3. Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el método **PUT**.  
+- Vamos a la clase `ProductService`, vamos a agregar un método abstracto `updateProduct` que no retorne valor, en el cual tengamos como parámetros un String `id` y `product` de tipo `ProductDTO`.  
+- En la clase `ProductServiceImpl`, implementamos el método creado en `ProductService` en el cual hacemos una eliminación (delete) del `id` en `productRepo`, a `product` le agregamos el `id` y realizamos una actualización (**put**) a `productRepo` con `product.getId()` y `product`.  
+- En la clase `ProductServiceController`, vamos a crear un método de nombre `updateProduct` que retorne `ResponseEntity<Object>` y que tenga como parámetros un `@PathVariable("id") String id` y `@RequestBody ProductDTO`.
+- En este método, al igual que en el `create`, vamos a agregar la annotation `@RequestMapping` que tenga `value` con `"/products/{id}"` y `method` con `RequestMethod.PUT`.
+- Invocar al método `updateProduct` de `ProductService` y retornamos:
+```
+  new ResponseEntity<>("Product is updated successfully", HttpStatus.OK);
+```
+- Compilar y ejecutar
+- Ir a postman, agregamos un nuevo tab, seleccionamos PUT y ponemos la siguiente URL `http://localhost:8080/products/3` y como request `{"name" : "Indian Ginger"}`
+- Vuelva a ejecutar el GET del ejercicio 1.
 Ejercicio 3.4: Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el
 método DELETE
 -
@@ -102,12 +76,10 @@ id.
 -
 En este método al igual que en el créate vamos a agregar el anotation @RequestMapping que tenga value
 con "/products/{id}" y method con RequestMethod.DELETE. Invocar al método deleteProduct de
-ProductService y retornamos
-new ResponseEntity<>("Product is deleted successfully", HttpStatus.OK);
--
-Compilar y ejecutar
--
-Ir a postman, agregamos un nuevo tab, seleccionamos DELETE y ponemos la siguiente URL
-http://localhost:8080/products/3
--
-Vuelva a ejecutar el GET del ejercicio 3.1.
+ProductService y retornamos  
+```
+  new ResponseEntity<>("Product is deleted successfully", HttpStatus.OK);
+```
+- Compilar y ejecutar  
+- Ir a postman, agregamos un nuevo tab, seleccionamos DELETE y ponemos la siguiente URL `http://localhost:8080/products/3`
+- Vuelva a ejecutar el GET del ejercicio 3.1.  
