@@ -36,6 +36,8 @@ _*Para tener en cuenta en la clase `ProductServiceImpl` vamos a tener un `HashMa
   [{"id": "1","name": "Honey"},{"id": "2","name": "Almond" }]
 ```
   
+  ![resolución](../screenshots/ej3-1.png)  
+  
 ---
 2. Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el método **POST**.  
 - Vamos a la clase `ProductService`, y agregamos un método `createProduct` que no retorne valor, en el cual tengamos como parámetro un producto de tipo `ProductDTO`.
@@ -48,6 +50,8 @@ _*Para tener en cuenta en la clase `ProductServiceImpl` vamos a tener un `HashMa
 - Compilar y ejecutar
 - Ir a postman, agregamos un nuevo tab, seleccionamos **POST** y ponemos la siguiente URL `http://localhost:8080/products` y como request `{ "id":"3", "name":"Ginger"}`
 - Vuelva a ejecutar el **GET** del ejercicio anterior.  
+  
+  ![resolución](../screenshots/ej3-2.png)  
   
 ---
 3. Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el método **PUT**.  
@@ -63,6 +67,8 @@ _*Para tener en cuenta en la clase `ProductServiceImpl` vamos a tener un `HashMa
 - Ir a postman, agregamos un nuevo tab, seleccionamos **PUT** y ponemos la siguiente URL `http://localhost:8080/products/3` y como request `{"name" : "Indian Ginger"}`
 - Vuelva a ejecutar el **GET** del ejercicio 1.  
   
+  ![resolución](../screenshots/ej3-3.png)  
+  
 ---
 4. Vamos a continuar trabajando en el proyecto del ejercicio 3. En este ejercicio vamos a agregar el método **DELETE**.  
 - Vamos a la clase `ProductService`, vamos a agregar un método abstracto `deleteProducto` que no retorne valor, en el cual tengamos como parámetros un `id`.
@@ -75,3 +81,5 @@ _*Para tener en cuenta en la clase `ProductServiceImpl` vamos a tener un `HashMa
 - Compilar y ejecutar  
 - Ir a postman, agregamos un nuevo tab, seleccionamos **DELETE** y ponemos la siguiente URL `http://localhost:8080/products/3`
 - Vuelva a ejecutar el **GET** del ejercicio 1.  
+  
+  ![resolución](../screenshots/ej3-4.png)  
