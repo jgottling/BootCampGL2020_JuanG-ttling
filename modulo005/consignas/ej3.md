@@ -26,7 +26,8 @@ _*Para tener en cuenta en la clase `ProductServiceImpl` vamos a tener un `HashMa
 ```java
   @RequestMapping(value = "/products")
   public ResponseEntity<Object> getProduct() {
-  return new ResponseEntity<>(productService.getProducts(), HttpStatus.OK);
+    return new ResponseEntity<>(productService.getProducts(), HttpStatus.OK);
+  }
 ```
   
 - Compilar y ejecutar  
