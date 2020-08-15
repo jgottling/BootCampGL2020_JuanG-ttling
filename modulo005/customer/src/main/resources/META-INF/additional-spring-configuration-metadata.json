@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "customer.name",
+    "type": "java.lang.String",
+    "description": "Name of the customer"
+  },
+  {
+    "name": "customer.apellido",
+    "type": "java.lang.String",
+    "description": "Apellido of customer"
+  },
+  {
+    "name": "customer.id",
+    "type": "java.lang.Long",
+    "description": "ID of customer"
+  },
+    {
+    "name": "customer.dni",
+    "type": "java.lang.Long",
+    "description": "DNI of customer"
+  }
+]}

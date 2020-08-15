@@ -1,6 +1,6 @@
 package com.globallogic.bootcampms.order.utils;
 
-import com.globallogic.bootcampgl.order.models.Order;
+import com.globallogic.bootcampms.order.models.Order;
 
 public class OrderFactory {
 

@@ -1,6 +1,6 @@
 package com.globallogic.bootcampms.product.repository;
 
-import com.globallogic.bootcampgl.product.models.Product;
+import com.globallogic.bootcampms.product.models.Product;
 
 import lombok.NoArgsConstructor;
 
