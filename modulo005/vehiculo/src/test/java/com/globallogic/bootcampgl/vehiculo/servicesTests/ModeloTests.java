@@ -13,28 +13,33 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
+import com.globallogic.bootcampgl.vehiculo.dtos.ModeloDTO;
 import com.globallogic.bootcampgl.vehiculo.model.Modelo;
 import com.globallogic.bootcampgl.vehiculo.repository.ModeloRepository;
 
 import com.globallogic.bootcampgl.vehiculo.service.impl.ModeloServiceImpl;
+import com.globallogic.bootcampgl.vehiculo.utils.ModeloMapper;
 
 @ExtendWith(MockitoExtension.class)
 public class ModeloTests {
 	@Mock
 	ModeloRepository repository;
+			
+	@Mock
+	ModeloMapper mapper;
 	
 	@InjectMocks
 	ModeloServiceImpl service;
+
 	
 	@Test
 	@DisplayName("Get all modelos")
-	public void test1() {
-		List<Modelo> list = new ArrayList<Modelo>();
-		Modelo m1 = new Modelo();
-		Modelo m2 = new Modelo();
-		Modelo m3 = new Modelo();
-		Modelo m4 = new Modelo();
+	void test1() {
+		List<ModeloDTO> list = new ArrayList<ModeloDTO>();
+		ModeloDTO m1 = new ModeloDTO();
+		ModeloDTO m2 = new ModeloDTO();
+		ModeloDTO m3 = new ModeloDTO();
+		ModeloDTO m4 = new ModeloDTO();
 		
 		list.add(m4);
 		list.add(m3);
@@ -47,25 +52,33 @@ public class ModeloTests {
 	
 	@Test
 	@DisplayName("Update modelo")
-	public void test2() {
+	void test2() {
+		ModeloDTO modeloDTO = new ModeloDTO();
 		Modelo modelo = new Modelo();
-		service.updateModelo("1", modelo);
+		
+		when(mapper.mapFromDTOtoEntity(modeloDTO)).thenReturn(modelo);
+		
+		service.updateModelo("1", modeloDTO);
 		
 		verify(repository).deleteById(Integer.valueOf("1"));
 	}
 	
 	@Test
 	@DisplayName("Create modelo")
-	public void test3() {
+	void test3() {
+		ModeloDTO modeloDTO = new ModeloDTO();
 		Modelo modelo = new Modelo();
-		service.createModelo(modelo);
+		
+		when(mapper.mapFromDTOtoEntity(modeloDTO)).thenReturn(modelo);
+		
+		service.createModelo(modeloDTO);
 		
 		verify(repository).save(modelo);
 	}
 	
 	@Test
 	@DisplayName("Delete modelo")
-	public void test4() {
+	void test4() {
 		service.deleteModelo("2");
 		
 		verify(repository).deleteById(2);

@@ -14,9 +14,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.globallogic.bootcampgl.vehiculo.dtos.TipoDTO;
 import com.globallogic.bootcampgl.vehiculo.model.Tipo;
 import com.globallogic.bootcampgl.vehiculo.repository.TipoRepository;
 import com.globallogic.bootcampgl.vehiculo.service.impl.TipoServiceImpl;
+import com.globallogic.bootcampgl.vehiculo.utils.TipoMapper;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -24,17 +26,20 @@ public class TipoTests {
 	@Mock
 	TipoRepository repository;
 	
+	@Mock
+	TipoMapper mapper;
+	
 	@InjectMocks
 	TipoServiceImpl service;
 	
 	@Test
 	@DisplayName("Get all tipos")
-	public void test1() {
-		List<Tipo> list = new ArrayList<Tipo>();
-		Tipo t1 = new Tipo();
-		Tipo t2 = new Tipo();
-		Tipo t3 = new Tipo();
-		Tipo t4 = new Tipo();
+	void test1() {
+		List<TipoDTO> list = new ArrayList<TipoDTO>();
+		TipoDTO t1 = new TipoDTO();
+		TipoDTO t2 = new TipoDTO();
+		TipoDTO t3 = new TipoDTO();
+		TipoDTO t4 = new TipoDTO();
 		
 		list.add(t4);
 		list.add(t3);
@@ -47,25 +52,33 @@ public class TipoTests {
 	
 	@Test
 	@DisplayName("Update tipo")
-	public void test2() {
+	void test2() {
+		TipoDTO tipoDTO = new TipoDTO();
 		Tipo tipo = new Tipo();
-		service.updateTipo("1", tipo);
+		
+		when(mapper.mapFromDTOtoEntity(tipoDTO)).thenReturn(tipo);
+		
+		service.updateTipo("1", tipoDTO);
 		
 		verify(repository).deleteById(Integer.valueOf("1"));
 	}
 	
 	@Test
 	@DisplayName("Create tipo")
-	public void test3() {
+	void test3() {
+		TipoDTO tipoDTO = new TipoDTO();
 		Tipo tipo = new Tipo();
-		service.createTipo(tipo);
+		
+		when(mapper.mapFromDTOtoEntity(tipoDTO)).thenReturn(tipo);
+		
+		service.createTipo(tipoDTO);
 		
 		verify(repository).save(tipo);
 	}
 	
 	@Test
 	@DisplayName("Delete tipo")
-	public void test4() {
+	void test4() {
 		service.deleteTipo("2");
 		
 		verify(repository).deleteById(2);

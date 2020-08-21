@@ -1,16 +1,21 @@
 package com.globallogic.bootcampgl.vehiculo.controller;
 
+import java.util.Objects;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.globallogic.bootcampgl.vehiculo.dtos.TipoDTO;
 import com.globallogic.bootcampgl.vehiculo.exceptions.EmptyValueException;
-import com.globallogic.bootcampgl.vehiculo.model.Tipo;
 import com.globallogic.bootcampgl.vehiculo.service.TipoService;
 
 @RestController
@@ -20,31 +25,30 @@ public class TipoController {
 	@Autowired
 	TipoService tipoService;
 	
-	@RequestMapping(method = RequestMethod.GET)
+	@GetMapping
 	public ResponseEntity<Object> getTipos() {
 		
 		return new ResponseEntity<>(tipoService.getTipos(), HttpStatus.OK);
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<String> createTipo(@RequestBody Tipo newTipo) {
+	@PostMapping
+	public ResponseEntity<String> createTipo(@RequestBody TipoDTO newTipo) {
 		
-		if (newTipo.getPuertas() == "" || newTipo.getPuertas() == null) throw new EmptyValueException("puertas");
+		if (newTipo.getPuertas().equals("") || Objects.isNull(newTipo.getPuertas())) throw new EmptyValueException("puertas");
 		
 		tipoService.createTipo(newTipo);
-		return new ResponseEntity<String>("Tipo CREADO exitosamente", HttpStatus.CREATED);
+		return new ResponseEntity<>("Tipo CREADO exitosamente", HttpStatus.CREATED);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<String> updateTipo(@PathVariable("id") String id, @RequestBody Tipo tipo) {
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<String> updateTipo(@PathVariable("id") String id, @RequestBody TipoDTO tipo) {
 		tipoService.updateTipo(id, tipo);
-		return new ResponseEntity<String>("Tipo ACTUALIZADO correctamente", HttpStatus.OK);
+		return new ResponseEntity<>("Tipo ACTUALIZADO correctamente", HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<String> deleteTipo(@PathVariable("id") String id) {
 		tipoService.deleteTipo(id);
-		return new ResponseEntity<String>("Tipo BORRADO exitosamente", HttpStatus.OK);
+		return new ResponseEntity<>("Tipo BORRADO exitosamente", HttpStatus.OK);
 	}
-
 }

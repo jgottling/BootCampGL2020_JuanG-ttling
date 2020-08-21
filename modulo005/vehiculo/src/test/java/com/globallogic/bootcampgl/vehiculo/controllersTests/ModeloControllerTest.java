@@ -2,6 +2,7 @@ package com.globallogic.bootcampgl.vehiculo.controllersTests;
 
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,36 +13,38 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
 import com.globallogic.bootcampgl.vehiculo.controller.ModeloController;
-import com.globallogic.bootcampgl.vehiculo.model.Modelo;
+import com.globallogic.bootcampgl.vehiculo.dtos.ModeloDTO;
 import com.globallogic.bootcampgl.vehiculo.service.ModeloService;
 
 @ExtendWith(MockitoExtension.class)
 public class ModeloControllerTest {
-	
 
 	  @Mock
-	  private ModeloService modeloService;
+	  ModeloService modeloService;
 	  
 	  @InjectMocks
-	  private ModeloController controller;
+	  ModeloController controller;
 	  
-	  private List<Modelo> modelosList;
+	  List<ModeloDTO> modelosList;
 	  
 	  @BeforeEach
 	  void setUp() {
-		  this.modelosList = new ArrayList<Modelo>();
-		  this.modelosList.add(new Modelo());
-		  this.modelosList.add(new Modelo());
-		  this.modelosList.add(new Modelo());
+		  this.modelosList = new ArrayList<ModeloDTO>();
+		  this.modelosList.add(new ModeloDTO());
+		  this.modelosList.add(new ModeloDTO());
+		  this.modelosList.add(new ModeloDTO());
 	  }
 	  
 	  @Test
 	  @DisplayName("Received http get all")
-	  private void test1() {
+	  void test1() {
 		  when(modeloService.getModelos()).thenReturn(modelosList);
-			controller.getModelos();
-			verify(modeloService).getModelos();
+			
+		  controller.getModelos();
+			
+		  verify(modeloService).getModelos();
 
 	  }
 }

@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class VehiculoApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	void contextLoads() {
 	}
 
 }

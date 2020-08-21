@@ -15,9 +15,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.globallogic.bootcampgl.vehiculo.dtos.VehiculoDTO;
 import com.globallogic.bootcampgl.vehiculo.model.Vehiculo;
 import com.globallogic.bootcampgl.vehiculo.repository.VehiculoRepository;
 import com.globallogic.bootcampgl.vehiculo.service.impl.VehiculoServiceImpl;
+import com.globallogic.bootcampgl.vehiculo.utils.VehiculoMapper;
 
 @ExtendWith(MockitoExtension.class)
 public class VehiculoTests {
@@ -25,17 +27,20 @@ public class VehiculoTests {
 	@Mock
 	VehiculoRepository repository;
 	
+	@Mock
+	VehiculoMapper mapper;
+	
 	@InjectMocks
 	VehiculoServiceImpl service;
 	
 	@Test
 	@DisplayName("Get all vehiculos")
-	public void test1() {
-		List<Vehiculo> list = new ArrayList<Vehiculo>();
-		Vehiculo v1 = new Vehiculo();
-		Vehiculo v2 = new Vehiculo();
-		Vehiculo v3 = new Vehiculo();
-		Vehiculo v4 = new Vehiculo();
+	void test1() {
+		List<VehiculoDTO> list = new ArrayList<VehiculoDTO>();
+		VehiculoDTO v1 = new VehiculoDTO();
+		VehiculoDTO v2 = new VehiculoDTO();
+		VehiculoDTO v3 = new VehiculoDTO();
+		VehiculoDTO v4 = new VehiculoDTO();
 		
 		list.add(v4);
 		list.add(v3);
@@ -48,25 +53,34 @@ public class VehiculoTests {
 	
 	@Test
 	@DisplayName("Update vehiculo")
-	public void test2() {
+	void test2() {
 		Vehiculo vehiculo = new Vehiculo();
-		service.updateVehiculo("1", vehiculo);
+		VehiculoDTO vehiculoDTO = new VehiculoDTO();
+		
+		when(mapper.mapFromDTOtoEntity(vehiculoDTO)).thenReturn(vehiculo);
+		
+		
+		service.updateVehiculo("1", vehiculoDTO);
 		
 		verify(repository).deleteById(Integer.valueOf("1"));
 	}
 	
 	@Test
 	@DisplayName("Create vehiculo")
-	public void test3() {
+	void test3() {
 		Vehiculo vehiculo = new Vehiculo();
-		service.createVehiculo(vehiculo);
+		VehiculoDTO vehiculoDTO = new VehiculoDTO();
 		
+		when(mapper.mapFromDTOtoEntity(vehiculoDTO)).thenReturn(vehiculo);
+		
+		service.createVehiculo(vehiculoDTO);
+				
 		verify(repository).save(vehiculo);
 	}
 	
 	@Test
 	@DisplayName("Delete vehiculo")
-	public void test4() {
+	void test4() {
 		service.deleteVehiculo("2");
 		
 		verify(repository).deleteById(2);
