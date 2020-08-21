@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.globallogic.bootcampgl.vehiculo.exceptions.EmptyValueException;
 import com.globallogic.bootcampgl.vehiculo.model.Tipo;
 import com.globallogic.bootcampgl.vehiculo.service.TipoService;
 
@@ -26,6 +28,9 @@ public class TipoController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<String> createTipo(@RequestBody Tipo newTipo) {
+		
+		if (newTipo.getPuertas() == "" || newTipo.getPuertas() == null) throw new EmptyValueException("puertas");
+		
 		tipoService.createTipo(newTipo);
 		return new ResponseEntity<String>("Tipo CREADO exitosamente", HttpStatus.CREATED);
 	}
