@@ -22,33 +22,33 @@ import com.globallogic.bootcampgl.vehiculo.service.TipoService;
 @RequestMapping("/tipos")
 public class TipoController {
 
-	@Autowired
-	TipoService tipoService;
-	
-	@GetMapping
-	public ResponseEntity<Object> getTipos() {
-		
-		return new ResponseEntity<>(tipoService.getTipos(), HttpStatus.OK);
-	}
+  @Autowired TipoService tipoService;
 
-	@PostMapping
-	public ResponseEntity<String> createTipo(@RequestBody TipoDTO newTipo) {
-		
-		if (newTipo.getPuertas().equals("") || Objects.isNull(newTipo.getPuertas())) throw new EmptyValueException("puertas");
-		
-		tipoService.createTipo(newTipo);
-		return new ResponseEntity<>("Tipo CREADO exitosamente", HttpStatus.CREATED);
-	}
+  @GetMapping
+  public ResponseEntity<Object> getTipos() {
+    return new ResponseEntity<>(tipoService.getTipos(), HttpStatus.OK);
+  }
 
-	@PutMapping(value = "/{id}")
-	public ResponseEntity<String> updateTipo(@PathVariable("id") String id, @RequestBody TipoDTO tipo) {
-		tipoService.updateTipo(id, tipo);
-		return new ResponseEntity<>("Tipo ACTUALIZADO correctamente", HttpStatus.OK);
-	}
+  @PostMapping
+  public ResponseEntity<String> createTipo(@RequestBody TipoDTO newTipo) {
 
-	@DeleteMapping(value = "/{id}")
-	public ResponseEntity<String> deleteTipo(@PathVariable("id") String id) {
-		tipoService.deleteTipo(id);
-		return new ResponseEntity<>("Tipo BORRADO exitosamente", HttpStatus.OK);
-	}
+    if (newTipo.getPuertas().equals("") || Objects.isNull(newTipo.getPuertas()))
+      throw new EmptyValueException("puertas");
+
+    tipoService.createTipo(newTipo);
+    return new ResponseEntity<>("Tipo CREADO exitosamente", HttpStatus.CREATED);
+  }
+
+  @PutMapping(value = "/{id}")
+  public ResponseEntity<String> updateTipo(
+      @PathVariable("id") String id, @RequestBody TipoDTO tipo) {
+    tipoService.updateTipo(id, tipo);
+    return new ResponseEntity<>("Tipo ACTUALIZADO correctamente", HttpStatus.OK);
+  }
+
+  @DeleteMapping(value = "/{id}")
+  public ResponseEntity<String> deleteTipo(@PathVariable("id") String id) {
+    tipoService.deleteTipo(id);
+    return new ResponseEntity<>("Tipo BORRADO exitosamente", HttpStatus.OK);
+  }
 }
