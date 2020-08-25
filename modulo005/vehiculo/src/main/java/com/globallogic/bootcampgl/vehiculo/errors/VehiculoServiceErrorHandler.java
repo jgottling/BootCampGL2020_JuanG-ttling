@@ -15,14 +15,14 @@ import com.globallogic.bootcampgl.vehiculo.exceptions.EmptyValueException;
 @ControllerAdvice
 public class VehiculoServiceErrorHandler {
 
-	@ExceptionHandler(EmptyValueException.class)
-    public ResponseEntity<Object> handleCityNotFoundException(
-    		EmptyValueException exception, WebRequest request) {
+  @ExceptionHandler(EmptyValueException.class)
+  public ResponseEntity<Object> handleCityNotFoundException(
+      EmptyValueException exception, WebRequest request) {
 
-        Map<String, Object> body = new LinkedHashMap<>();
-        body.put("timestamp", LocalDateTime.now());
-        body.put("message", exception.getMessage());
+    Map<String, Object> body = new LinkedHashMap<>();
+    body.put("timestamp", LocalDateTime.now());
+    body.put("message", exception.getMessage());
 
-        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
-    }
+    return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+  }
 }
