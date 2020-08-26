@@ -20,8 +20,29 @@
 		<sonar.coverage.exclusions>**/*Application.java</sonar.coverage.exclusions>
 		<sonar.java.source>8</sonar.java.source>
 	</properties>
+	
+	
 
 	<dependencies>
+	
+		<dependency>
+	    <groupId>io.springfox</groupId>
+	    <artifactId>springfox-swagger2</artifactId>
+	    <version>2.9.2</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-hateoas</artifactId>
+	    <version>2.1.4.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>io.springfox</groupId>
+	    <artifactId>springfox-swagger-ui</artifactId>
+	    <version>2.9.2</version>
+	</dependency>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
