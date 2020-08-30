@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 public class BookDTO {
   private long isbn;
   private String title;
-  private String author;
-  private String genre;
+  private long authorId;
+  private long genreId;
 
   public static BookDTO createFromEntity(Book book) {
 

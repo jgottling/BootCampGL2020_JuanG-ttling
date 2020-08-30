@@ -5,7 +5,7 @@ logging:
                 stat: debug
                 type: trace
 server:
-    port: 8030
+    port: 8190
     servlet:
         context-path: /genres/v1
 spring:

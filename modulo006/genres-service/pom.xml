@@ -10,10 +10,11 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ar.com.bootcampgl2020</groupId>
-	<artifactId>books-service</artifactId>
+	<artifactId>genres-service</artifactId>
 	<version>1</version>
-	<name>books-service</name>
-	<description>books service</description>
+	<name>genres-service</name>
+	<description>genres service</description>
+
 
 	<properties>
 		<java.version>1.8</java.version>

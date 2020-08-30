@@ -5,7 +5,7 @@ logging:
                 stat: debug
                 type: trace
 server:
-    port: 8001
+    port: 8180 
     servlet:
         context-path: /authors/v1
 spring:
