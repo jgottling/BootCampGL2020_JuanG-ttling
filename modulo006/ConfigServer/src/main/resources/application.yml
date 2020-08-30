@@ -6,4 +6,8 @@ spring:
         config:
             server:
                 git:
-                    uri: 
+                    uri: https://github.com/jgottling/BootCampGL2020_JuanG-ttling/tree/mod6/modulo006/properties
+eureka:
+    client:
+        service-url:
+            default-zone: http://localhost:8761/eureka
