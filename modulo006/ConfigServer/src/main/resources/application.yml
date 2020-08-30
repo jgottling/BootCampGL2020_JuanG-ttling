@@ -6,8 +6,13 @@ spring:
         config:
             server:
                 git:
-                    uri: https://github.com/jgottling/BootCampGL2020_JuanG-ttling/tree/mod6/modulo006/properties
+                    uri: https://github.com/jgottling/BootCampGL2020_JuanG-ttling/
+                    search-paths: modulo006/properties
+                    skip-ssl-validation: true
+                    clone-on-start: true
+                    basedir: target/configs                    
 eureka:
     client:
         service-url:
             default-zone: http://localhost:8761/eureka
+            
