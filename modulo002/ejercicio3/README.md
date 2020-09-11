@@ -1,7 +1,7 @@
 ### Mockito  
   
-1. Para este ejemplo, utilizaremos el proyecto provisto en el archivo mockito.example.zip. Para poder implementar un test completo de la librería, se tendrá que crear un mock para probar los objetos
-instanciados, para ellos  
+1. Para este ejemplo, utilizaremos el proyecto provisto en el archivo mockito.example.zip. Para poder implementar un test completo de la librería, se tendrá que crear un mock para probar los objetos instanciados, para ello:  
+
 - Agregar al pom las dependencias de mockito:  
   - **groupId**: org.mockito, **artifactId**: mockito-core, **version**: 3.4.0, **scope**: test  
   - **groupId**: org.mockito, **artifactId**: mockito-junit-jupiter, **version**: 3.4.0, **scope**: test  
@@ -11,11 +11,12 @@ instanciados, para ellos
   ```  
   
 - Implementar un mock de la interfaz y probar la librería:
-  - Agregar un atributo a la clase:
+  - Agregar un atributo a la clase: 
   ```java  
   @Mock  
   Vehicle vehicleMock;  
-  ```  
+  ```
+ 
 
   - Modificar el test Crash para que utilice el mock y volver a realizar la prueba.  
   ```java  
